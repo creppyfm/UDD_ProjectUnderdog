@@ -8,11 +8,8 @@ public class FIFTEEN_leastCommonQXZ {
     public static void main(String[] args) {
         //initialize counters
         int countQ = 0, countX = 0, countZ = 0;
-        //initialize storage for least common letter
-        String leastCommon = "Q";
 
         try (Scanner reader = new Scanner(Paths.get("sowpods.txt"))) {
-
             //iterate through each line of txt file
             while (reader.hasNextLine()) {
                 String line = reader.nextLine();
@@ -53,26 +50,17 @@ public class FIFTEEN_leastCommonQXZ {
 
     //checks for 'Q' in words
     public static Boolean containsQ (String line) {
-        if (line.contains("Q")) {
-            return true;
-        }
-        return false;
+        return line.contains("Q");
     }
 
     //checks for 'X' in words
     public static Boolean containsX (String line) {
-        if (line.contains("X")) {
-            return true;
-        }
-        return false;
+        return line.contains("X");
     }
 
     //checks for 'Z' in words
     public static Boolean containsZ (String line) {
-        if (line.contains("Z")) {
-            return true;
-        }
-        return false;
+        return line.contains("Z");
     }
 
 }

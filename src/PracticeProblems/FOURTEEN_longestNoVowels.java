@@ -42,14 +42,10 @@ public class FOURTEEN_longestNoVowels {
     }
     //checks for vowels in lines
     public static Boolean containsNoVowels (String line) {
-        if (!line.contains("A") &&
-            !line.contains("E") &&
-            !line.contains("I") &&
-            !line.contains("O") &&
-            !line.contains("U")) {
-
-            return true;
-        }
-        return false;
+        return !line.contains("A") &&
+                !line.contains("E") &&
+                !line.contains("I") &&
+                !line.contains("O") &&
+                !line.contains("U");
     }
 }
