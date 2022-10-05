@@ -7,31 +7,23 @@ import java.util.Scanner;
 public class THIRTEEN_shortestContainsAllFiveVowels {
     public static void main(String[] args) {
       try (Scanner reader = new Scanner(Paths.get("sowpods.txt"))) {
-          //initialize storage for words in txt file
-          ArrayList<String> array = new ArrayList<>();
+          //initialize storage for words that contain all five vowels
+          ArrayList<String> allVowels = new ArrayList<>();
 
-          //iterate through txt file, storing values to 'array'
+          //iterate through txt file, storing target values to 'allVowels'
           while (reader.hasNextLine()) {
               String line = reader.nextLine();
-              array.add(line);
-          }
 
-          //initialize storage for words that contain all five vowels
-          ArrayList<String> arrayVowelWords = new ArrayList<>();
-
-          //iterate over each word in the array
-          for (String string:array) {
-              //check for all vowels
-              if (containsAllVowels(string)) {
-                  //add words that contain all vowels
-                  arrayVowelWords.add(string);
+              if (containsAllVowels(line)) {
+                  allVowels.add(line);
               }
           }
-          //initialize variable to store shortest word
-          String shortest = arrayVowelWords.get(0);
 
-          //iterate over elements in 'arrayVowelWords'
-          for (String string: arrayVowelWords) {
+          //initialize variable to store shortest word
+          String shortest = allVowels.get(0);
+
+          //iterate over elements in 'allVowels'
+          for (String string: allVowels) {
               //check 'shortest' against every element; assign shorter word to 'shortest' variable
               if (shortest.length() >= string.length()) {
                   shortest = string;
