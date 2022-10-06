@@ -7,7 +7,9 @@ public class FIFTEEN_leastCommonQXZ {
 
     public static void main(String[] args) {
         //initialize counters
-        int countQ = 0, countX = 0, countZ = 0;
+        int countQ = 0;
+        int countX = 0;
+        int countZ = 0;
 
         try (Scanner reader = new Scanner(Paths.get("sowpods.txt"))) {
             //iterate through each line of txt file
