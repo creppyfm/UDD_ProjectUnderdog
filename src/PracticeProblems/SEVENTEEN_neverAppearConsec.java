@@ -58,7 +58,4 @@ public class SEVENTEEN_neverAppearConsec {
         }
     }
 
-    public static Boolean appearsConsecutively (String line) {
-        return false;
-    }
 }
