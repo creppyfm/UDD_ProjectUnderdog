@@ -14,7 +14,6 @@ public class SIXTEEN_longestPalindrome {
 
         try (Scanner reader = new Scanner(Paths.get("sowpods.txt"))) {
 
-            //iterate through file line by line
             while (reader.hasNextLine()) {
                 //initialize storage for lines from file and
                 //their reversed counterparts
@@ -23,7 +22,7 @@ public class SIXTEEN_longestPalindrome {
 
                 //checks equivalence between lines/reversed lines
                 if (isPalindrome(line, lineReverse)) {
-                    //add palindromes to list
+                    //add palindromes to list to be
                     palindromes.add(line);
                 }
 
@@ -56,8 +55,8 @@ public class SIXTEEN_longestPalindrome {
 
     //reverses string; returns reversed string
     public static String reverseString (String line) {
-        StringBuffer stringBuff = new StringBuffer(line);
-        return stringBuff.reverse().toString();
+        StringBuilder stringBuild = new StringBuilder(line);
+        return stringBuild.reverse().toString();
     }
 
     //checks if a string is equivalent to itself when reversed

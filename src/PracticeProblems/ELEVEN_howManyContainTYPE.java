@@ -8,9 +8,13 @@ public class ELEVEN_howManyContainTYPE {
     //main code
     public static void main(String[] args) {
         try (Scanner reader = new Scanner(Paths.get("sowpods.txt"))) {
+            //intialize counter to track words that satisfy param.
             int count = 0;
             while (reader.hasNextLine()) {
+                //storing line data for later use
                 String line = reader.nextLine();
+                //conditional verifies param. are met; increments counter
+                //if necessary
                 if (containsTYPE(line)) {
                     count++;
                 }
@@ -25,9 +29,6 @@ public class ELEVEN_howManyContainTYPE {
 
     //checks for target substring
     static Boolean containsTYPE(String string) {
-        if (string.contains("TYPE")) {
-            return true;
-        }
-        return false;
+        return string.contains("TYPE");
     }
 }

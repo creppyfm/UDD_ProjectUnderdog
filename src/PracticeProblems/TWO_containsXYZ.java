@@ -8,7 +8,10 @@ public class TWO_containsXYZ {
     public static void main(String[] args) {
         try (Scanner reader = new Scanner(Paths.get("sowpods.txt"))) {
             while (reader.hasNextLine()) {
+                //storing line contents for use later
                 String line = reader.nextLine();
+                //conditional to verify presence of X, Y, and Z to return only
+                //words that contain all three
                 if (line.contains("X") &&
                     line.contains("Y") &&
                     line.contains("Z")) {

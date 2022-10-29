@@ -6,14 +6,14 @@ import java.util.Scanner;
 public class FIFTEEN_leastCommonQXZ {
 
     public static void main(String[] args) {
-        //initialize counters
+        //initialize counters to track occurrences of target letters
         int countQ = 0;
         int countX = 0;
         int countZ = 0;
 
         try (Scanner reader = new Scanner(Paths.get("sowpods.txt"))) {
-            //iterate through each line of txt file
             while (reader.hasNextLine()) {
+                //initialize storage of line data to be passed to 'contains' methods
                 String line = reader.nextLine();
 
                 //checks for 'Q'; increments as necessary
@@ -36,7 +36,7 @@ public class FIFTEEN_leastCommonQXZ {
             if (smallestNumber < countZ) {
                 if (smallestNumber == countQ) {
                     System.out.println("The least common letter is Q: " + countQ + " instances.");
-                } else if (smallestNumber == countX) {
+                } else {
                     System.out.println("The least common letter is X:" + countX + " instances.");
                 }
             } else {

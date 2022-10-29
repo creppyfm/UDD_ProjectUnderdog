@@ -5,11 +5,11 @@ import java.nio.file.Paths;
 
 public class ONE_containsUU {
     public static void main(String[] args) {
-        //initialize reader
+
         try (Scanner reader = new Scanner(Paths.get("sowpods.txt"))) {
-            //iterate through file until all lines are read
+
             while (reader.hasNextLine()) {
-                //store line contents
+                //store line contents for use later
                 String line = reader.nextLine();
                 //check for target char sequence; return results
                 if(line.contains("UU")) {

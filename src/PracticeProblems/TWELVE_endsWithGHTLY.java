@@ -10,8 +10,8 @@ public class TWELVE_endsWithGHTLY {
         try (Scanner reader = new Scanner(Paths.get("sowpods.txt"))) {
             //initialize arrayList to easily add lines using .add()
             ArrayList<String> array = new ArrayList<>();
-            //iterate through txt file
             while (reader.hasNextLine()) {
+                //initialize storage for line data to be used in conditional
                 String line = reader.nextLine();
                 //check for target ending
                 if (line.endsWith("GHTLY")) {

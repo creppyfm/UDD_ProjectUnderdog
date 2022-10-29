@@ -24,7 +24,8 @@ public class THIRTEEN_shortestContainsAllFiveVowels {
 
           //iterate over elements in 'allVowels'
           for (String string: allVowels) {
-              //check 'shortest' against every element; assign shorter word to 'shortest' variable
+              //check 'shortest' against every element; assign shorter word to 'shortest'
+              //to be returned
               if (shortest.length() >= string.length()) {
                   shortest = string;
               }
@@ -42,14 +43,11 @@ public class THIRTEEN_shortestContainsAllFiveVowels {
 
     //checks if line contains all five vowels
     public static Boolean containsAllVowels(String line) {
-        if (line.contains("A") &&
+        return line.contains("A") &&
                 line.contains("E") &&
                 line.contains("I") &&
                 line.contains("O") &&
-                line.contains("U")) {
-            return true;
-        }
-        return false;
+                line.contains("U");
 
     }
 

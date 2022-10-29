@@ -10,7 +10,10 @@ public class TEN_containsAllFiveVowelsAlphabetical {
     public static void main(String[] args) {
         try (Scanner reader = new Scanner(Paths.get("sowpods.txt"))) {
             while (reader.hasNextLine()) {
+                //storing line data for later use
                 String line = reader.nextLine();
+                //conditional to verify param. are met; returns
+                //words that satisfy param.
                 if (containsAllVowels(line) &&
                     vowelsAlphabetical(line)) {
                     System.out.println(line);
@@ -26,15 +29,11 @@ public class TEN_containsAllFiveVowelsAlphabetical {
 
     //checks if all vowels are present
     static Boolean containsAllVowels(String string) {
-        if (string.contains("A") &&
-            string.contains("E") &&
-            string.contains("I") &&
-            string.contains("O") &&
-            string.contains("U")) {
-            return true;
-        }
-
-        return false;
+        return string.contains("A") &&
+                string.contains("E") &&
+                string.contains("I") &&
+                string.contains("O") &&
+                string.contains("U");
     }
 
     //checks if all vowels are in alphabetical order

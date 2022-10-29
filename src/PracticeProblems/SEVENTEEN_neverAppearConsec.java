@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class SEVENTEEN_neverAppearConsec {
     public static void main (String[] args) {
 
+        //initializing storage for various stages of processing
         ArrayList<String> lines = new ArrayList<>();
         ArrayList<String> appearsConsecutively = new ArrayList<>();
         ArrayList<String> letters = new ArrayList<>();
@@ -15,6 +16,7 @@ public class SEVENTEEN_neverAppearConsec {
         try (Scanner reader = new Scanner(Paths.get("sowpods.txt"))){
 
             while (reader.hasNextLine()) {
+                //initialize storage for line data to be added to list
                 String line = reader.nextLine();
                 lines.add(line);
             }
@@ -49,6 +51,7 @@ public class SEVENTEEN_neverAppearConsec {
                 }
             }
 
+            //return letters that do not appear consecutively
             System.out.println(doesNotAppearConsecutively);
 
         } catch (IOException e) {

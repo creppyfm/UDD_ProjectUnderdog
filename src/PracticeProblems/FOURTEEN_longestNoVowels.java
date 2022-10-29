@@ -11,8 +11,9 @@ public class FOURTEEN_longestNoVowels {
             //initialize storage for words that do not contain any vowels
             ArrayList<String> noVowels = new ArrayList<>();
 
-            //iterate through file line by line;
             while (reader.hasNextLine()) {
+                //initialize storage for line data to be passed to
+                //'containsNoVowels' method
                 String line = reader.nextLine();
                 //check each line for vowels;
                 if (containsNoVowels(line)) {
@@ -24,7 +25,8 @@ public class FOURTEEN_longestNoVowels {
             //initialize storage for longest word with no vowels
             String longestNoVowels = noVowels.get(0);
 
-            //iterate over all elements in noVowels
+            //iterate over all elements in noVowels, storing longest
+            //word containing no vowels
             for (String string: noVowels) {
                 if (string.length() > longestNoVowels.length()) {
                     longestNoVowels = string;
