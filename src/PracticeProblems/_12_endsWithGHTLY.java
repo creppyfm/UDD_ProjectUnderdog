@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.nio.file.Paths;
 import java.util.Arrays;
 
-public class TWELVE_endsWithGHTLY {
+public class _12_endsWithGHTLY {
     public static void main(String[] args) {
         try (Scanner reader = new Scanner(Paths.get("sowpods.txt"))) {
             //initialize arrayList to easily add lines using .add()

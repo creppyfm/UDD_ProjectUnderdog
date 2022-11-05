@@ -2,9 +2,8 @@ package PracticeProblems;
 import java.io.IOException;
 import java.util.Scanner;
 import java.nio.file.Paths;
-import java.io.FileNotFoundException;
 
-public class TEN_containsAllFiveVowelsAlphabetical {
+public class _10_containsAllFiveVowelsAlphabetical {
 
     //main code
     public static void main(String[] args) {

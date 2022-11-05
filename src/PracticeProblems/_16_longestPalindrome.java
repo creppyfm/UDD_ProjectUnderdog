@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 
-public class SIXTEEN_longestPalindrome {
+public class _16_longestPalindrome {
     public static void main(String[] args) {
 
         //initialize list to hold palindromes

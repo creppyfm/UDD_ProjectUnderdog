@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-public class SEVENTEEN_neverAppearConsec {
+public class _17_neverAppearConsecutively {
     public static void main (String[] args) {
 
         //initializing storage for various stages of processing

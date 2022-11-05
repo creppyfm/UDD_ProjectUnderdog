@@ -4,7 +4,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class THIRTEEN_shortestContainsAllFiveVowels {
+public class _13_shortestContainsAllFiveVowels {
     public static void main(String[] args) {
       try (Scanner reader = new Scanner(Paths.get("sowpods.txt"))) {
           //initialize storage for words that contain all five vowels

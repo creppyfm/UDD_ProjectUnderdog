@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.IOException;
 
-public class FOURTEEN_longestNoVowels {
+public class _14_longestNoVowels {
     public static void main(String[] args) {
         try (Scanner reader = new Scanner(Paths.get("sowpods.txt"))) {
 

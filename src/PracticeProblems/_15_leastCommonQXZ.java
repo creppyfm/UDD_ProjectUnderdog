@@ -3,7 +3,7 @@ import java.nio.file.Paths;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class FIFTEEN_leastCommonQXZ {
+public class _15_leastCommonQXZ {
 
     public static void main(String[] args) {
         //initialize counters to track occurrences of target letters

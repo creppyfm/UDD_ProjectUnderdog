@@ -3,23 +3,24 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.nio.file.Paths;
 
-public class ONE_containsUU {
+public class _6_lessThanFiveContainsBX {
     public static void main(String[] args) {
-
         try (Scanner reader = new Scanner(Paths.get("sowpods.txt"))) {
-
             while (reader.hasNextLine()) {
-                //store line contents for use later
+                //storing line data to use later
                 String line = reader.nextLine();
-                //check for target char sequence; return results
-                if(line.contains("UU")) {
-                    System.out.println(line);
+
+                //conditional to verify param. are met
+                if (line.length() < 5 &&
+                    line.contains("B") &&
+                    line.contains("X")) {
+                        System.out.println(line);
                 }
             }
         } catch (IOException e) {
             System.out.println("See Error Below:");
             e.printStackTrace();
-            throw new RuntimeException(e);
+            throw new RuntimeException();
         }
     }
 }
