@@ -14,6 +14,7 @@ public class _21_shortestCountryName {
 
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
+
                 countries.add(line);
             }
 
