@@ -16,7 +16,7 @@ public class Garden {
         gardenMatrix[0][2] = new Flower(0, 2, 4, 1);
         gardenMatrix[0][3] = new Flower(0, 3, 3, 1);
         gardenMatrix[0][4] = new Flower(0, 4, 4, 1);
-        gardenMatrix[0][5] = new Flower(0, 5, 0, 0);
+        gardenMatrix[0][5] = new Flower(0, 5, 7, 1);
         gardenMatrix[1][0] = new Flower(1, 0, 0, 0);
         gardenMatrix[1][1] = new Flower(1, 1, 3, 1);
         gardenMatrix[1][2] = new Flower(1, 2, 7, 1);

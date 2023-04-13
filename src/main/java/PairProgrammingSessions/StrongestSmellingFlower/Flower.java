@@ -1,23 +1,31 @@
 package PairProgrammingSessions.StrongestSmellingFlower;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class Flower {
     int row;
     int col;
     int strength;
+    int relativeStrength;
     int decline;
+    List<Flower> parents;
     public Flower () {}
     public Flower (int row, int col) {
         this.row = row;
         this.col = col;
-        this.strength = (int)((Math.random() * 5));
-        this.decline = (int)((Math.random() * 2));
-
+        this.relativeStrength = 0;
+        this.parents = new ArrayList<>();
     }
     public Flower (int row, int col, int strength, int decline) {
         this.row = row;
         this.col = col;
         this.strength = strength;
         this.decline = decline;
+        this.parents = new ArrayList<>();
+
     }
     /*
         Generates Flower objects with random strength between 0 and 5, inclusive;

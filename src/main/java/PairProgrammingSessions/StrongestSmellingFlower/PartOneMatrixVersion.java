@@ -3,7 +3,7 @@ package PairProgrammingSessions.StrongestSmellingFlower;
 import java.util.HashMap;
 import java.util.Map;
 
-public class GardenMain {
+public class PartOneMatrixVersion {
     private static final int ROW = 5;
     private static final int COL = 5;
     private static final int ROW_LENGTH = 6;
@@ -44,7 +44,7 @@ public class GardenMain {
             for (int j = 0; j < garden[0].length; j++) {
                 if (isValid(i, j)) {
                     Flower curr = garden[i][j];
-                    int drop = calculatesDrop(start, curr);
+                    int drop = (calculatesDistance(start, curr) * curr.decline);
                     int relativeStrength = (curr.strength - drop);
                     flowerToRelativeStrength.put(curr, relativeStrength);
                 }
@@ -67,9 +67,10 @@ public class GardenMain {
                 opposed to checking if 'drop' is > 0 or < 0 and subtracting/adding
                 as necessary.
     */
-    private static int calculatesDrop (Flower start, Flower curr) {
-        int rowDiff = (Math.max(start.row, curr.row) - Math.min(start.row, curr.row));
-        int colDiff = (Math.max(start.col, curr.col) - Math.min(start.col, curr.col));
+    private static int calculatesDistance(Flower start, Flower curr) {
+        int rowDiff = Math.abs(start.row - curr.row);
+        int colDiff = Math.abs(start.col - curr.col);
+
         return rowDiff + colDiff;
     }
 
