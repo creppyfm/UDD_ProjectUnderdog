@@ -6,7 +6,6 @@ import java.util.*;
         Maximum diameter = *need to remember this formula for optimization
     */
 
-
 public class PartTwoListAndMatrix {
     private static final int START_ROW = 4;
     private static final int START_COL = 0;
@@ -60,6 +59,12 @@ public class PartTwoListAndMatrix {
 
     }
 
+    /*
+    * Don't need shortestPath or visited.
+    * Side note - the way I'm storing flower.row and flower.col is inefficient
+    *   -> instead, consider packing coordinates in an int
+    *       -> bitshift: Integer coordinate = (flower.row << 16) + flower.col;
+    * */
     private static int distanceOfPath(int row, int col, Flower flower) {
         List<Flower> shortestPath = new ArrayList<>();
         Set<String> visited = new HashSet<>();

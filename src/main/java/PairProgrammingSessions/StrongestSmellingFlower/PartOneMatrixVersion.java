@@ -27,16 +27,14 @@ public class PartOneMatrixVersion {
     }
 
     /*
-        traverses matrix looking for valid Flowers (Strength > 0)
-            -> calculates fragrance drop by comparing each Flower's
-                respective place in the matrix (see calculatesDrop().)
-            -> subtracts drop from valid Flower's strength, leaving us
-                with the strength of a Flower relative to it's distance
-                from the starting Flower.
-            -> maps current Flower to its relative strength
-            -> iterates over map to find Flower with the highest relative strength
-
-    */
+    * Return strongest smelling flower in garden relative to location (Row, col)
+    * Input:
+    *   row ->
+    *   col ->
+    * Output:
+    *   strongest smelling Flower
+    * Exceptions:
+    * */
     private static Flower strongestSmellingFlower(int row, int col, Flower[][] garden) {
         Flower start = garden[row][col];
         Map<Flower, Integer> flowerToRelativeStrength = new HashMap<>();
@@ -61,12 +59,7 @@ public class PartOneMatrixVersion {
         return strongestSmellingFlower;
     }
 
-    /*
-        Calculates drop by subtracting the smaller row value from the larger row value
-            -> allows method to always subtract 'drop' from 'curr.strength' as
-                opposed to checking if 'drop' is > 0 or < 0 and subtracting/adding
-                as necessary.
-    */
+
     private static int calculatesDistance(Flower start, Flower curr) {
         int rowDiff = Math.abs(start.row - curr.row);
         int colDiff = Math.abs(start.col - curr.col);
@@ -74,19 +67,13 @@ public class PartOneMatrixVersion {
         return rowDiff + colDiff;
     }
 
-    /*
-        allows parent method to skip Flowers with strength 0,
-        since they cannot be the strongest smelling flower.
-    */
+
     private static boolean isValid(int row, int col) {
         return GARDEN.gardenMatrix[row][col].strength > 0;
     }
 
 
-/*
-    for use in random generation version; creates List<Flower>
-    to be passed to Garden.java
-*/
+
 /*
     private static List<Flower> createListOfFlowers() {
         List<Flower> flowerList = new ArrayList<>();
