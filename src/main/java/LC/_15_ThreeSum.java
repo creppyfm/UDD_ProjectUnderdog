@@ -27,7 +27,6 @@ public class _15_ThreeSum {
                 int sum = nums[i] + nums[j] + nums[k];
                 if (sum == 0) {
                     solutionList.add(Arrays.asList(nums[i], nums[j], nums[k]));
-                    // Move j and k to the next different numbers
                     while (j < k && nums[j] == nums[j + 1]) j++;
                     while (j < k && nums[k] == nums[k - 1]) k--;
                     j++;
