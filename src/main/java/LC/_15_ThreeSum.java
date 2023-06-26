@@ -42,24 +42,3 @@ public class _15_ThreeSum {
     }
 }
 
-
-/*
-Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]]
-such that i != j, i != k, and j != k,
-and nums[i] + nums[j] + nums[k] == 0.
-
-Notice that the solution set must not contain duplicate triplets.
-
-Three pointers i, j, k
--- i starts at 0, j at i + 1, and k at nums.length - 1
--- while i <= nums.length - 3
--- sum three values
----- if sum < 0: move the smaller of j and k (if j < k: increment j, if k < j: decrement k)
------- else-if sum > 0: move the larger of j and k (if j > k: increment j, if k > j: decrement k)
------- else-if sum == 0: add values from each pointer to new list; sort the list
-
--- add triplet list to Set<List<Integer>> solutionSet to ensure unique lists
----- if solutionSet.add(list) == false:
-
--- convert solutionSet to List<List<Integer>> solutionList;
-* */
